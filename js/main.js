@@ -11,5 +11,18 @@ async function getMovies(url) {
         }
     });
     const respData = await resp.json();
-    console.log(respData);
+
+    respData.films.forEach(movie => {
+        document.querySelector('.films').innerHTML +=
+            `
+        <div class="film">
+            <div class="film__poster">
+                <img src="${movie.posterUrl}">
+            </div>
+            <div class="film__hover"> ${movie.nameRu}</div>
+
+        </div>
+        `;
+        console.log(movie)
+    });
 }
