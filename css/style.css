@@ -89,6 +89,11 @@ header .body {
 }
 
 .films {
+  padding-top: 20px;
+  background-color: #E56FCB;
+}
+
+.films .body {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;

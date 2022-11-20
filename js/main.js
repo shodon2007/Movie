@@ -23,7 +23,7 @@ async function getMovies(url) {
         } else if (movie.rating >= 8) {
             type = "rgba(0, 255, 0, 0.5)";
         }
-        document.querySelector('.films').innerHTML +=
+        document.querySelector('.films .body').innerHTML +=
             `
         <div class="film">
             <img class="film__img" src="${movie.posterUrl}">
