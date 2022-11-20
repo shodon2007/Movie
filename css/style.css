@@ -16,7 +16,7 @@
 }
 
 header {
-  background-color: black;
+  background-image: linear-gradient(45deg, #00F0FF 50%, #E56FCB);
 }
 
 .header__logo {
@@ -31,6 +31,16 @@ header .body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 0;
+}
+
+.header__burger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__burger img {
+  max-width: 30px;
 }
 
 .header__search {
