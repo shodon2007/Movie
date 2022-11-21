@@ -38,3 +38,14 @@ async function getMovies(url) {
         `;
     });
 }
+
+
+window.addEventListener('scroll', function () {
+    if (window.pageYOffset >= 50) {
+        document.querySelector('header').style.position = 'fixed';
+    } else {
+        document.querySelector('header').style.position = 'relative';
+        document.querySelector('.films').style.marginTop = document.querySelector('header').offsetHeight;
+        console.log(document.querySelector('header').offsetHeight);
+    }
+})

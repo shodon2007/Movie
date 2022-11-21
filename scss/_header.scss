@@ -1,12 +1,14 @@
 header {
     background-image: linear-gradient(45deg, #00F0FF 50%, #E56FCB);
+    position: relative;
+    width: 100%;
+    z-index: 2;
 }
 
 header .body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
 }
 
 .header__logo {
@@ -20,6 +22,7 @@ header .body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 10px;
 }
 
 .header__burger img {
@@ -33,6 +36,7 @@ header .body {
     align-items: center;
     height: 100%;
     width: 100%;
+    margin: 10px 0;
 }
 
 .search__input {
@@ -67,10 +71,8 @@ header .body {
     }
 }
 
-
-// Responsive
 @media (max-width: 1200px) {
-    header {
-        padding: 0 20px;
+    header .body {
+        padding: 0 10px;
     }
 }
