@@ -1,5 +1,26 @@
 const API_KEY = "43437f96-2c13-4cae-af86-96ad63fbf88f";
 const API_URL_POPULAR = "https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_250_BEST_FILMS&page=1";
+let isBurger = false;
+const burger = document.querySelector('.burger');
+const burgerMenu = document.querySelector('.burger__menu');
+let burgerClick = () => {
+    isBurger = isBurger == false ? true : false;
+
+    if (isBurger == true) {
+        burger.style.zIndex = 3;
+        burger.style.opacity = 1;
+        burgerMenu.style.right = "0px";
+    } else {
+        burger.style.opacity = 0;
+        burgerMenu.style.right = "300px";
+        setTimeout(() => {
+            burger.style.zIndex = -3;
+        }, 500);
+    }
+}
+
+
+
 
 getMovies(API_URL_POPULAR);
 
@@ -48,4 +69,4 @@ window.addEventListener('scroll', function () {
         document.querySelector('.films').style.marginTop = document.querySelector('header').offsetHeight;
         console.log(document.querySelector('header').offsetHeight);
     }
-})
+});

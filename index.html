@@ -13,7 +13,7 @@
     <div class="burger">
         <div class="burger__menu">
             <div class="burger__top">
-                <div class="burger__exit">
+                <div class="burger__exit" onclick="burgerClick()">
                     <svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="91.1527" y="499.999" width="128.91" height="578.197" rx="40"
                             transform="rotate(-135 91.1527 499.999)" />
@@ -27,12 +27,12 @@
                 <div class="burger__link">Series</div>
             </div>
         </div>
-        <div class="burger__another"></div>
+        <div class="burger__another" onclick="burgerClick()"></div>
     </div>
     <header>
         <div class="body">
             <div class="header__burger">
-                <img src="img/burger.png" alt="burger">
+                <img src="img/burger.png" alt="burger" onclick="burgerClick()">
             </div>
             <div class="header__search">
                 <input type="text" class="search__input" placeholder="search film...">
@@ -45,7 +45,7 @@
         </div>
     </div>
 
-    <script type="module" src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
