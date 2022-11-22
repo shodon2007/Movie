@@ -38,7 +38,6 @@ async function getMovies(url) {
         let type = "white";
         if (movie.rating <= 7.7) {
             type = "rgba(255, 0, 0, 0.5)";
-            console.log("fined")
         } else if (movie.rating < 8) {
             type = "rgba(255, 255, 0, 0.5)";
         } else if (movie.rating >= 8) {
@@ -67,6 +66,5 @@ window.addEventListener('scroll', function () {
     } else {
         document.querySelector('header').style.position = 'relative';
         document.querySelector('.films').style.marginTop = document.querySelector('header').offsetHeight;
-        console.log(document.querySelector('header').offsetHeight);
     }
 });
