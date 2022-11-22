@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Kavoon&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sansita&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arbutus+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 * {
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,6 +11,10 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
 }
 
 header {
@@ -176,6 +182,63 @@ header .body {
     grid-template-columns: 1fr;
   }
 }
+.burger {
+  display: flex;
+  justify-content: space-between;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+}
+
+.burger__menu {
+  position: relative;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.burger__another {
+  width: 100%;
+  background-color: black;
+  opacity: 0.8;
+}
+
+.burger__exit {
+  padding: 10px;
+  display: flex;
+  justify-content: end;
+}
+
+.burger__link {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  background-color: black;
+  margin: 5px 0;
+  padding: 5px;
+}
+
+.burger__link:hover {
+  background-color: rgb(69, 69, 69);
+  transition: all 0.3s ease;
+}
+
+.link__active {
+  background-color: white !important;
+  color: black;
+}
+
+.burger__exit svg {
+  max-width: 30px;
+  max-height: 30px;
+  fill: white;
+  cursor: pointer;
+}
+
 .body {
   max-width: 1200px;
   margin: 0 auto;
