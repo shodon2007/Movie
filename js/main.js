@@ -27,10 +27,14 @@ getMovies(API_URL_POPULAR);
 async function getMovies(url) {
     const resp = await fetch(url, {
         headers: {
+            'Access-Control-Allow-Origin': 'http://127.0.0.1:3000',
+            'Access-Control-Allow-Methods': 'POST',
+            'Access-Control-Allow-Headers': 'Content-Type',
             "Content-Type": 'application/json',
             "X-API-KEY": API_KEY,
-        }
+        },
     });
+    resp.headers.append('GET', 'POST', 'OPTIONS');
     const respData = await resp.json();
 
     respData.films.forEach(movie => {
