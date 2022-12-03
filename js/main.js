@@ -1,7 +1,7 @@
 const API_KEY = "43437f96-2c13-4cae-af86-96ad63fbf88f";
 const API_URL_POPULAR = "https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_250_BEST_FILMS";
 const API_URL_SEARCH = "https://kinopoiskapiunofficial.tech/api/v2.1/films/search-by-keyword?keyword="
-let page = 6;
+let page = 1;
 let maxPages;
 let URL = ``;
 let searched = false;
@@ -41,11 +41,11 @@ async function getMovies(url) {
 
 function showRating(rating) {
     if (rating <= 7.7) {
-        return "rgba(255, 0, 0, 0.5)";
+        return "rgba(255, 0, 0, 1)";
     } else if (rating < 8) {
-        return "rgba(255, 255, 0, 0.5)";
+        return "rgba(255, 255, 0, 1)";
     } else if (rating >= 8) {
-        return "rgba(0, 255, 0, 0.5)";
+        return "rgba(0, 255, 0, 1)";
     }
 }
 
@@ -58,7 +58,7 @@ function renderMovies(movie, rating) {
             
             <div class="film__body">
                 <div class="film__bottom">
-                    <div class="film__rating" style="background-color: ${rating}">${movie.rating}</div>
+                    <div class="film__rating" style="color: ${rating}">${movie.rating}</div>
                     <div class="film__year">${movie.year}</div>
                 </div>
             </div>
