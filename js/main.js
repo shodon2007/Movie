@@ -40,7 +40,7 @@ async function getMovies(url) {
 
 
 function showRating(rating) {
-    if (rating <= 7.7) {
+    if (rating <= 7) {
         return "rgba(255, 0, 0, 1)";
     } else if (rating < 8) {
         return "rgba(255, 255, 0, 1)";
