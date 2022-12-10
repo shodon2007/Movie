@@ -51,14 +51,15 @@ function showRating(rating) {
 
 
 function renderMovies(movie, rating) {
+    console.log(movie);
     document.querySelector('.films .body').innerHTML +=
         `
         <div class="film">
             <img class="film__img" src="${movie.posterUrl}">
             
             <div class="film__body">
-                <div class="film__bottom">
-                    <div class="film__rating" style="color: ${rating}">${movie.rating}</div>
+                <div class="film__bottom" style="border: 3px solid ${rating}">
+                    <div class="film__rating">${movie.rating}</div>
                     <div class="film__year">${movie.year}</div>
                 </div>
             </div>

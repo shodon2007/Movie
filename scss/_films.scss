@@ -5,6 +5,7 @@
 
 .films .body {
     display: grid;
+    gap: 10px;
     grid-template-columns: repeat(5, 1fr);
 }
 
@@ -31,18 +32,18 @@
 }
 
 .film__bottom {
+    padding: 10px;
     position: absolute;
     width: 100%;
     bottom: 0;
     left: 0;
-    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.film__rating {
-    background-color: rgba(255, 255, 255, 0.5);
+.film__name {
+    color: white;
     padding: 5px 10px;
     display: flex;
     justify-content: center;
@@ -50,10 +51,12 @@
     font-weight: bold;
 }
 
+.film__rating {
+    color: white;
+}
+
 .film__year {
-    font-family: 'Sansita', sans-serif;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.5);
+    color: white;
 }
 
 .film__img {
