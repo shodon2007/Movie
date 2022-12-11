@@ -107,6 +107,7 @@ header .body {
 }
 
 .film__bottom {
+  background-color: black;
   padding: 10px;
   position: absolute;
   width: 100%;
