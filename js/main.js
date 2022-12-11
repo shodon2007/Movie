@@ -30,6 +30,13 @@ async function getMovies(url) {
         let rating = showRating(+movie.rating);
 
         renderMovies(movie, rating)
+
+        let filmImg = document.querySelectorAll('.film__img');
+        let filmBody = document.querySelector('.film__body');
+
+        filmImg.forEach((el) => {
+            el.style.height = `${filmBody.offsetWidth * 1.5}px`;
+        })
     });
     ++page;
     allowed = true;
@@ -51,12 +58,12 @@ function showRating(rating) {
 
 
 function renderMovies(movie, rating) {
-    console.log(movie);
     document.querySelector('.films .body').innerHTML +=
         `
         <div class="film">
-            <img class="film__img" src="${movie.posterUrl}">
-            
+            <div class="film__img">
+            <img loading="lazy" src="${movie.posterUrl}">
+            </div>
             <div class="film__body">
                 <div class="film__bottom" style="border: 3px solid ${rating}">
                     <div class="film__rating">${movie.rating}</div>
@@ -69,7 +76,6 @@ function renderMovies(movie, rating) {
 
 
 
-
 let allowed = true;
 
 window.addEventListener('scroll', function () {
@@ -77,7 +83,6 @@ window.addEventListener('scroll', function () {
         if (page <= maxPages) {
             allowed = false;
             setUrl();
-            console.log(page);
             getMovies(URL);
         }
     }

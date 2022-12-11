@@ -136,8 +136,12 @@ header .body {
 }
 
 .film__img {
-  max-width: 100%;
+  background-color: rgb(173, 173, 173);
+}
+
+.film__img img {
   height: 100%;
+  max-width: 100%;
 }
 
 @media (max-width: 1200px) {
