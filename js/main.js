@@ -38,6 +38,9 @@ async function getMovies(url) {
             el.style.height = `${filmBody.offsetWidth * 1.5}px`;
         })
     });
+    if (respData.films == false) {
+        document.querySelector('.films .body').innerHTML = 'Movie not fond =('
+    }
     ++page;
     allowed = true;
 }
@@ -101,9 +104,13 @@ searchButton.addEventListener('click', (e) => {
     page = 1;
     searchValue = searchInput.value;
     setUrl();
-    getMovies(URL);
+    if (searchValue == '') {
+        searched = false;
+        getMovies("https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_250_BEST_FILMS");
+    } else {
+        getMovies(URL);
+    }
     console.log(document.querySelector('body').offsetHeight);
     document.querySelector('.films .body').innerHTML = "";
-    getMovies(apiSearchUrl);
     searchInput.value = '';
 })

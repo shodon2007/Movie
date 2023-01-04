@@ -11,12 +11,14 @@ header .body {
 }
 
 .header__search {
+    border: 3px solid #0080ff;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     width: 100%;
     margin: 5px 0;
+    padding: 5px 10px;
 }
 
 .search__input {
@@ -24,18 +26,18 @@ header .body {
     justify-content: center;
     align-items: center;
     font-family: 'Roboto', sans-serif;
-    text-transform: uppercase;
     padding-left: 5px;
+    font-size: 20px;
     height: 30px;
     max-width: 100%;
     flex: 1 1 auto;
     border: none;
     outline: none;
-    background-color: rgba(255, 255, 255, 0.5);
-    color: black;
+    background-color: transparent;
+    color: rgb(192, 209, 255);
 
     &::placeholder {
-        color: #717171;
+        color: #6bddff;
     }
 }
 
@@ -48,12 +50,13 @@ header .body {
     width: 30px;
     height: 30px;
     padding: 3px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
 
     & img {
+        filter: invert(100%);
         max-width: 15px;
     }
 }
