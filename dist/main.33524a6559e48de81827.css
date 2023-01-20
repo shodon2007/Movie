@@ -1,0 +1,224 @@
+/*!************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./scss/style.scss ***!
+  \************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Kavoon&display=swap);
+/*!****************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./scss/style.scss (1) ***!
+  \****************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Sansita&display=swap);
+/*!****************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./scss/style.scss (2) ***!
+  \****************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Arbutus+Slab&display=swap);
+/*!****************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./scss/style.scss (3) ***!
+  \****************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap);
+/*!****************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./scss/style.scss (4) ***!
+  \****************************************************************************************************************/
+* {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none; }
+
+*::-webkit-scrollbar {
+  width: 0; }
+
+header {
+  position: relative;
+  width: 100%;
+  z-index: 2; }
+
+header .body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.header__search {
+  border: 3px solid #0080ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin: 5px 0;
+  padding: 5px 10px; }
+
+.search__input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  padding-left: 5px;
+  font-size: 20px;
+  height: 30px;
+  max-width: 100%;
+  flex: 1 1 auto;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #c0d1ff; }
+  .search__input::placeholder {
+    color: #6bddff; }
+
+.search__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  width: 30px;
+  height: 30px;
+  padding: 3px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .search__button img {
+    filter: invert(100%);
+    max-width: 15px; }
+
+@media (max-width: 1200px) {
+  header .body {
+    padding: 0 10px; } }
+
+.films {
+  padding-top: 20px; }
+
+.films .body {
+  color: white;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(5, 1fr); }
+
+.film {
+  overflow: hidden;
+  position: relative; }
+
+.film__body {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.4); }
+
+.film__body:hover {
+  opacity: 1; }
+
+.film__bottom {
+  background-color: black;
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.film__name {
+  color: white;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold; }
+
+.film__rating {
+  color: white; }
+
+.film__year {
+  color: white; }
+
+.film__img {
+  background-color: #adadad; }
+
+.film__img img {
+  height: 100%;
+  max-width: 100%; }
+
+@media (max-width: 1200px) {
+  .films .body {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 10px; } }
+
+@media (max-width: 900px) {
+  .films .body {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media (max-width: 360px) {
+  .films .body {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media (max-width: 250px) {
+  .films .body {
+    grid-template-columns: 1fr; } }
+
+.burger {
+  display: flex;
+  justify-content: space-between;
+  z-index: -3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.5s, right 0.5s;
+  background-color: rgba(0, 0, 0, 0.9); }
+
+.burger__menu {
+  right: 300px;
+  transition: opacity 0.5s, right 0.5s;
+  position: relative;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  width: 300px; }
+
+.burger__another {
+  width: 100%; }
+
+.burger__exit {
+  padding: 10px;
+  display: flex;
+  justify-content: end; }
+
+.burger__link {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  background-color: black;
+  margin: 5px 0;
+  padding: 5px; }
+
+.burger__link:hover {
+  background-color: #454545;
+  transition: all 0.3s ease; }
+
+.link__active {
+  background-color: white !important;
+  color: black; }
+
+.burger__exit svg {
+  max-width: 30px;
+  max-height: 30px;
+  fill: white;
+  cursor: pointer; }
+
+.films__pagination {
+  display: flex; }
+
+body {
+  background: url(df06287927288e4ae1c4.png) center center/cover no-repeat fixed; }
+
+.body {
+  max-width: 1200px;
+  margin: 0 auto; }
+
